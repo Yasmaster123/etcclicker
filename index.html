@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Et Cetera Clicker</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-family: 'UnifrakturMaguntia', cursive;
+            font-size: 48px;
+            margin: 20px 0;
+        }
+        #reader-count, #reader-rate {
+            font-size: 24px;
+            margin: 20px 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .item {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Et Cetera Clicker</h1>
+    <p id="reader-count">Readers: 0</p>
+    <p id="reader-rate">Readers per Second: 0</p>
+    <p id="quest">Quest: Acquire "Another Writer"!</p>
+    <button id="click-button">Get Readers (Wait 3 seconds)</button>
+
+    <div id="purchasables" class="section">
+        <h2>Purchasables</h2>
+        <button class="item" id="paper" disabled>Paper (Cost: 10, +1/sec) [Owned: 0]</button>
+    </div>
+
+    <div id="upgrades" class="section">
+        <h2>Upgrades</h2>
+        <button class="item" id="another-writer" disabled>Another Writer (Cost: 50, +5/sec) [Owned: 0]</button>
+        <button class="item" id="writing-classes" disabled>Writing Classes (Cost: 100, Decrease cooldown by 1s) [Owned: 0]</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
